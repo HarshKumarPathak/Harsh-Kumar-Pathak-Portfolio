@@ -1,16 +1,16 @@
 # Harsh Kumar Pathak — Portfolio
 
-Personal portfolio of **Harsh Kumar Pathak**, an AI/ML Engineer focused on Generative AI, data systems, and cloud-native solutions.
+Personal portfolio of **Harsh Kumar Pathak**, a 3rd-year CSE (AI & ML) student at **BIT Mesra**, focused on AI/ML, Generative AI, data, and cloud technologies.
 
-## Highlights
+## ✨ Highlights
 
-- AI & Machine Learning projects and practical engineering work
-- Generative AI and data-focused solutions
-- Responsive experience across desktop, tablet, and mobile
-- Interactive visual elements and project showcase
-- Certifications, experience, education, and contact information
+- Responsive portfolio for desktop, tablet, and mobile
+- Projects, skills, education, certifications, and experience
+- Interactive visual effects and animations
+- Social preview and favicon assets
+- Static site with no backend or build step
 
-## Technologies
+## 🛠️ Tech Stack
 
 - HTML5
 - CSS3
@@ -19,30 +19,44 @@ Personal portfolio of **Harsh Kumar Pathak**, an AI/ML Engineer focused on Gener
 - GSAP & ScrollTrigger
 - Google Fonts
 
-## Live Website
+## 🚀 Run locally
 
-**GitHub Pages:** Enable GitHub Pages for this repository to publish the portfolio from the `main` branch and repository root.
+No build step is required.
 
-## Social Preview & Favicon
+1. Clone the repository.
+2. Open `index.html` in a browser, or serve the folder with any static HTTP server.
+3. A local server is recommended when testing browser APIs and external assets.
 
-The repository includes a custom `assets/og-image.png` for social link previews and `assets/favicon.png` for browser tabs and bookmarks. The Open Graph and Twitter card metadata are already included in `index.html`.
+## 🌐 Deployment
 
-## GitHub Pages Deployment
+The site can be deployed to GitHub Pages or another static hosting provider.
 
-1. Upload `index.html` to the root of your GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select the `main` branch and `/ (root)` folder.
-5. Save and open the generated GitHub Pages URL.
+For GitHub Pages:
 
-## Author
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Select the `main` branch and `/ (root)` folder.
+4. Save and open the generated Pages URL.
 
-**Harsh Kumar Pathak**
+## 📁 Repository structure
 
-- Email: hp852120@gmail.com
+```text
+.
+├── index.html
+├── README.md
+└── assets/
+    ├── favicon.png
+    └── og-image.png
+```
+
+## 🔎 Notes
+
+The portfolio currently keeps the main implementation in a single `index.html`, including the content and embedded portfolio assets. This keeps deployment simple and makes the site easy to publish as a static page.
+
+As the project grows, separating CSS and JavaScript into dedicated files would improve maintainability and make the repository easier to review and contribute to.
+
+## 📫 Contact
+
 - LinkedIn: https://linkedin.com/in/harsh-kumar-pathak-67504a2a7
 - GitHub: https://github.com/HarshKumarPathak
-
-## Notes
-
-This portfolio is packaged as a self-contained `index.html`, with the required portfolio images and certificate PDFs embedded directly in the page.
+- Email: hp852120@gmail.com
