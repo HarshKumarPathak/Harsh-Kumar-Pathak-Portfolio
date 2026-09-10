@@ -8,6 +8,7 @@ Personal portfolio of **Harsh Kumar Pathak**, a 3rd-year CSE (AI & ML) student a
 - Projects, skills, education, certifications, and experience
 - Interactive visual effects and animations
 - Social preview and favicon assets
+- SEO-ready metadata, sitemap, and robots configuration
 - Static site with no backend or build step
 
 ## 🛠️ Tech Stack
@@ -38,12 +39,17 @@ For GitHub Pages:
 3. Select the `main` branch and `/ (root)` folder.
 4. Save and open the generated Pages URL.
 
+The repository also includes `robots.txt`, `sitemap.xml`, and `.nojekyll` for a cleaner static-site deployment.
+
 ## 📁 Repository structure
 
 ```text
 .
 ├── index.html
 ├── README.md
+├── robots.txt
+├── sitemap.xml
+├── .nojekyll
 └── assets/
     ├── favicon.png
     └── og-image.png
