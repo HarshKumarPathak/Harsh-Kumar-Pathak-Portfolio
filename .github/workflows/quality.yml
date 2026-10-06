@@ -1,0 +1,43 @@
+name: Portfolio quality check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate portfolio entry point
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path("index.html")
+          if not path.exists():
+              raise SystemExit("index.html is missing")
+
+          text = path.read_text(encoding="utf-8", errors="strict")
+          checks = {
+              "title": r"<title>\\s*[^<]+</title>",
+              "viewport": r'<meta[^>]+name=[\"\']viewport[\"\'][^>]*>',
+              "description": r'<meta[^>]+name=[\"\']description[\"\'][^>]*>',
+          }
+
+          for name, pattern in checks.items():
+              if not re.search(pattern, text, re.I):
+                  raise SystemExit(f"Missing required {name} metadata")
+
+          if re.search(r"console\\.log\\s*\\(", text):
+              raise SystemExit("console.log found in production HTML")
+
+          print(f"Validated {path} ({path.stat().st_size:,} bytes)")
+          print("Required metadata present; no console.log found.")
+          PY
